@@ -3,21 +3,22 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 // Components
-import Header from './components/Header';
+import Menu from './components/Menu';
 import Home from './components/Home';
 import About from './components/About';
-import Work from './components/Work';
+import Storitve from './components/Storitve';
+import Kontakt from './components/Kontakt';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Route path="/" component={Header} />
-        <div className="container">
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/work" component={Work} />
-        </div>
+        <Route path="/menu" component={Menu} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/o-nas" component={About} />
+        <Route exact path="/storitve" component={Storitve} />
+        <Route exact path="/kontakt" component={Kontakt} />
       </div>
     </BrowserRouter>
   );
